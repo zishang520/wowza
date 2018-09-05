@@ -1,6 +1,8 @@
 <?php
 namespace luoyy\Wowza;
 
+use Exception;
+
 class Live
 {
     private $api_url = 'https://api.cloud.wowza.com/api/%s';
