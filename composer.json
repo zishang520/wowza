@@ -1,0 +1,25 @@
+{
+    "name": "luoyy/wowza",
+    "description": "Wowza Streaming Cloud REST API",
+    "keywords": ["Wowza Live"],
+    "license": "GPL-2.0",
+    "time": "2017-06-07",
+    "authors": [{
+        "name": "zishang520",
+        "email": "zishang520@gmail.com",
+        "git": "https://github.com/zishang520/wowza",
+        "homepage": "http://www.luoyy.com"
+    }],
+    "require": {
+        "php": ">=5.6.0",
+        "ext-openssl": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "luoyy\\Wowza\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
