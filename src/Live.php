@@ -100,7 +100,7 @@ class Live
     {
         $name = is_null($name) ? md5(uniqid()) : $name;
         $response = $this->post(sprintf('%s/%s', $this->api_url, self::LIVE_STREAMS), json_encode([
-            'live_stream' => ['name' => $name, "delivery_protocols" => "rtmp", "transcoder_type" => "transcoded", "billing_mode" => "pay_as_you_go", "broadcast_location" => $this->broadcast_location, "encoder" => "other_rtmp", "delivery_method" => "push", "disable_authentication" => $this->disable_authentication, "video_fallback" => $fallback, "aspect_ratio_width" => 1280, "aspect_ratio_height" => 720]]));
+            'live_stream' => ['name' => $name, "delivery_protocols" => "rtmp", "transcoder_type" => "transcoded", "billing_mode" => "pay_as_you_go", "broadcast_location" => $this->broadcast_location, "encoder" => "other_rtmp", "delivery_method" => "push", "disable_authentication" => $this->disable_authentication, "video_fallback" => $fallback, "aspect_ratio_width" => 720, "aspect_ratio_height" => 1280]]));
         $body = json_decode($response->body, true);
         if ($response->http_code !== 201) {
             if (!empty($body)) {
